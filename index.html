@@ -26,72 +26,24 @@ body{
   font-family:'Inter',sans-serif;
   background:var(--dark);
   color:var(--light);
-  line-height:1.7;
+  line-height:1.75;
   font-size:16px;
 }
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block;border-radius:var(--radius)}
 
-/* Navigation */
-nav{
-  position:fixed;
-  top:0;left:0;
-  width:100%;
-  z-index:100;
-  background:rgba(11,15,20,0.7);
-  backdrop-filter:blur(10px);
-}
-.nav-inner{
-  max-width:var(--max-width);
-  margin:auto;
-  padding:18px 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.nav-logo{font-weight:600;letter-spacing:.5px}
-.nav-links a{
-  margin-left:28px;
-  font-size:14px;
-  color:var(--gray);
-}
-.nav-links a:hover{color:var(--light)}
-
-/* Hamburger */
-.hamburger{
-  display:none;
-  width:28px;
-  height:20px;
-  flex-direction:column;
-  justify-content:space-between;
-  cursor:pointer;
-}
-.hamburger span{
-  height:2px;
-  background:var(--light);
-  width:100%;
-  display:block;
-}
-
-/* Mobile Nav */
-.mobile-nav{
-  position:fixed;
-  inset:0;
-  background:rgba(11,15,20,0.95);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:999;
-}
-.mobile-nav.active{display:flex}
-.mobile-nav ul{list-style:none;text-align:center}
-.mobile-nav li{margin:20px 0}
-.mobile-nav a{
-  font-size:26px;
+section{padding:140px 24px;border-top:1px solid #1e2633}
+section:first-of-type{border-top:none}
+.section-inner{max-width:var(--max-width);margin:auto}
+.section-title{
   font-family:'Playfair Display',serif;
+  font-size:38px;
+  margin-bottom:46px;
 }
+.grid{display:grid;gap:90px;align-items:center}
+.grid-2{grid-template-columns:1fr 1fr}
+p{color:var(--accent);font-size:18px;margin-bottom:22px}
 
-/* Hero */
 .hero{
   position:relative;
   height:100vh;
@@ -124,167 +76,228 @@ nav{
 }
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-size:56px;
-  max-width:820px;
+  font-size:58px;
+  max-width:900px;
 }
 .hero p{
-  margin-top:26px;
-  max-width:720px;
-  color:var(--accent);
-  font-size:18px;
+  margin-top:30px;
+  max-width:820px;
+  font-size:20px;
 }
 
-/* Sections */
-section{padding:120px 24px;border-top:1px solid #1e2633}
-section:first-of-type{border-top:none}
-.section-inner{max-width:var(--max-width);margin:auto}
-.section-title{
-  font-family:'Playfair Display',serif;
-  font-size:36px;
-  margin-bottom:42px;
+.box{
+  background:var(--dark-soft);
+  padding:60px;
+  border-radius:var(--radius);
 }
-.grid{display:grid;gap:80px;align-items:center}
-.grid-2{grid-template-columns:1fr 1fr}
-
-/* About */
-.about p{color:var(--accent);margin-bottom:20px;font-size:18px}
-
-/* Principles */
-.principles{background:var(--dark-soft);padding:60px;border-radius:var(--radius)}
-.principles ul{list-style:none}
-.principles li{margin-bottom:16px;color:var(--accent);font-size:18px}
-
-/* Focus */
-.focus-item{margin-bottom:28px}
-.focus-item h4{font-weight:500;margin-bottom:8px}
-.focus-item p{color:var(--gray)}
-
-/* Investment */
-.investment p{font-size:18px;color:var(--accent)}
-
-/* Company */
-.company-box{background:var(--dark-soft);padding:48px;border-radius:var(--radius)}
-.company-box p{color:var(--accent);font-size:18px}
-
-/* Timeline */
-.timeline-item{border-left:2px solid #2a3345;padding-left:32px;margin-bottom:40px}
-.timeline-item h4{margin-bottom:8px;font-weight:500}
-.timeline-item p{color:var(--gray)}
-
-/* Compliance */
-.compliance-box{background:var(--dark-soft);padding:48px;border-radius:var(--radius)}
-.compliance-box p{font-size:18px;color:var(--accent)}
-
-/* Market */
-.market-card img{height:320px;width:100%;object-fit:cover}
-.market-card h4{margin-bottom:12px}
-.market-card p{color:var(--gray)}
-
-/* Contact */
-.contact{text-align:center}
-.contact p{color:var(--accent);max-width:640px;margin:20px auto 0;font-size:18px}
-
-/* Footer */
-footer{padding:60px 24px;border-top:1px solid #1e2633;text-align:center;color:var(--gray);font-size:14px}
 
 /* Responsive */
 @media(max-width:900px){
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .hero h1{font-size:38px}
-  .hero p{font-size:16px}
   .grid-2{grid-template-columns:1fr}
-  section{padding:80px 24px}
-  .market-card img{height:220px}
-  .section-title{font-size:30px}
+  section{padding:90px 24px}
+  .hero h1{font-size:40px}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">Taylor A. Miller</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#focus">Professional Focus</a>
-      <a href="#investment">Investment</a>
-      <a href="#company">Company</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#markets">Markets</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  </div>
-</nav>
-
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#focus">Professional Focus</a></li>
-    <li><a href="#investment">Investment</a></li>
-    <li><a href="#company">Company</a></li>
-    <li><a href="#timeline">Timeline</a></li>
-    <li><a href="#markets">Markets</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
-
+<!-- HERO -->
 <header class="hero">
   <video src="hero.mp4" autoplay muted loop playsinline></video>
   <div class="hero-content">
-    <h1>Healthcare Distribution Executive<br>Founder of All States M.E.D.</h1>
-    <p>Focused on medical devices, regulatory compliance, and long-term strategic investment.<br>
-       Long-term thinking in regulated healthcare markets.</p>
+    <h1>
+      Healthcare Distribution Executive<br>
+      Founder of All States M.E.D.
+    </h1>
+    <p>
+      Operating at the intersection of regulated healthcare distribution and long-term strategic investment.
+      Focused on institutional credibility, compliance discipline, and sustainable market development
+      within complex healthcare ecosystems.
+    </p>
   </div>
 </header>
 
-<!-- ABOUT（完整三段） -->
-<section id="about" class="about">
+<!-- ABOUT / BACKGROUND -->
+<section>
   <div class="section-inner grid grid-2">
     <img src="portrait-main.jpg">
     <div>
       <h2 class="section-title">About Taylor</h2>
-      <p>Taylor A. Miller entered the medical device industry with a clear focus on building sustainable systems rather than short-term transactions.</p>
-      <p>She approaches healthcare distribution through the lens of long-term responsibility, believing that compliance, credibility, and consistency are the foundations of durable growth.</p>
+      <p>
+        Taylor A. Miller entered the healthcare and medical device sector with a deliberate intention
+        to understand how regulated systems operate beneath surface-level commercial activity.
+      </p>
+      <p>
+        From the outset, her focus has not been on transactional volume, but on the structural
+        mechanisms that allow healthcare distribution to function sustainably across institutions,
+        jurisdictions, and regulatory environments.
+      </p>
+      <p>
+        Her work reflects a systems-oriented mindset—examining how compliance, operational discipline,
+        and long-term stakeholder alignment interact to create durable value in healthcare markets.
+      </p>
+      <p>
+        This perspective distinguishes her approach from conventional intermediaries, positioning
+        her work closer to infrastructure-building than short-term commercial brokerage.
+      </p>
     </div>
   </div>
+</section>
 
-  <div class="section-inner grid grid-2" style="margin-top:120px;">
+<!-- VALUES -->
+<section>
+  <div class="section-inner grid grid-2">
     <div>
-      <p>Independence has been central to Taylor’s professional path. She values decision-making autonomy, disciplined execution, and partnerships grounded in trust rather than convenience.</p>
-      <p>Her working style reflects stability, loyalty, and a long-term mindset—qualities she considers essential when operating in regulated healthcare environments.</p>
+      <h2 class="section-title">Values & Independence</h2>
+      <p>
+        Independence is not a stylistic preference for Taylor, but a structural requirement
+        for responsible decision-making in regulated industries.
+      </p>
+      <p>
+        She maintains professional autonomy to ensure that operational, regulatory, and ethical
+        considerations are not compromised by short-term incentives or external pressure.
+      </p>
+      <p>
+        This independence allows her to define clear boundaries, decline misaligned engagements,
+        and preserve accountability across all professional interactions.
+      </p>
+      <p>
+        In environments where risk is shared across institutions and patients,
+        such discipline becomes a prerequisite rather than a differentiator.
+      </p>
     </div>
     <img src="portrait-secondary.jpg">
   </div>
-
-  <div class="section-inner" style="margin-top:120px;">
-    <p>In decision-making, Taylor prioritizes regulatory clarity, operational sustainability, and institutional credibility over short-term efficiency. She avoids transactional arrangements that compromise long-term trust, favoring environments where accountability and transparency define professional standards.</p>
-  </div>
 </section>
 
-<!-- PRINCIPLES -->
-<section class="principles">
+<!-- PROFESSIONAL FOCUS -->
+<section>
   <div class="section-inner">
-    <h2 class="section-title">Operating Principles</h2>
-    <ul>
-      <li>Long-term orientation over short-term optimization</li>
-      <li>Regulatory discipline as a foundation for trust</li>
-      <li>Selective, institution-aligned partnerships</li>
-      <li>Measured growth within compliant healthcare frameworks</li>
-    </ul>
+    <h2 class="section-title">Professional Focus</h2>
+    <p>
+      Taylor’s professional focus spans strategic oversight, operational coordination,
+      and institutional engagement within the medical device distribution landscape.
+    </p>
+    <p>
+      Her work involves aligning compliant distribution frameworks with long-term market
+      requirements, while maintaining sensitivity to regulatory, logistical, and clinical constraints.
+    </p>
+    <p>
+      Rather than optimizing for rapid expansion, she prioritizes resilience, clarity,
+      and adaptability within evolving healthcare systems.
+    </p>
   </div>
 </section>
 
-<!-- 其余 sections（Focus / Investment / Company / Timeline / Compliance / Markets / Contact）保持你认可的完整版本 -->
-<!-- JS -->
-<script>
-const hamburger=document.getElementById('hamburger');
-const mobileNav=document.getElementById('mobileNav');
-hamburger.onclick=()=>mobileNav.classList.add('active');
-mobileNav.onclick=()=>mobileNav.classList.remove('active');
-</script>
+<!-- INVESTMENT -->
+<section>
+  <div class="section-inner">
+    <h2 class="section-title">Investment Philosophy</h2>
+    <p>
+      Taylor approaches investment as a continuation of operational understanding,
+      rather than as an abstract financial activity.
+    </p>
+    <p>
+      She evaluates opportunities through the lenses of regulatory sustainability,
+      institutional participation, and long-term systemic relevance.
+    </p>
+    <p>
+      This philosophy naturally excludes speculative behavior, favoring patient capital
+      deployed in environments where governance and structure support enduring value.
+    </p>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section>
+  <div class="section-inner grid grid-2">
+    <div class="box">
+      <h2 class="section-title">Company Relationship</h2>
+      <p>
+        Taylor is the founder and principal of All States M.E.D.,
+        a U.S.-based medical device distribution company operating within regulated healthcare markets.
+      </p>
+      <p>
+        Her role extends beyond formal leadership, encompassing strategic direction,
+        compliance oversight, and institutional relationship development.
+      </p>
+      <p>
+        The company serves as a practical platform through which her operational
+        and philosophical approach to healthcare distribution is implemented.
+      </p>
+    </div>
+    <img src="company.jpg">
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section>
+  <div class="section-inner">
+    <h2 class="section-title">Career Timeline</h2>
+    <p>
+      (Structured career milestones to be expanded and refined.)
+    </p>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section>
+  <div class="section-inner grid grid-2">
+    <div class="box">
+      <h2 class="section-title">Compliance & Ethics</h2>
+      <p>
+        Compliance is treated as an operational foundation rather than a procedural obligation.
+      </p>
+      <p>
+        Taylor emphasizes ethical clarity, documentation discipline, and transparency
+        across all stages of engagement.
+      </p>
+      <p>
+        In regulated healthcare environments, such principles function as safeguards
+        for institutional credibility and long-term trust.
+      </p>
+    </div>
+    <img src="engagements.jpg">
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section>
+  <div class="section-inner">
+    <h2 class="section-title">Global Market Presence</h2>
+    <p>
+      Taylor’s professional exposure spans multiple healthcare markets through
+      institutional interaction, industry engagement, and collaborative environments.
+    </p>
+
+    <p>
+      These interactions reflect professional collaboration and sector participation,
+      rather than public endorsements or formal partnerships.
+    </p>
+
+    <p>
+      Geographic engagement includes the United States, South Korea, and the United Kingdom,
+      where Taylor has maintained professional contact with healthcare institutions,
+      distributors, and industry participants within regulated frameworks.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="section-inner">
+    <h2 class="section-title">Professional & Strategic Inquiries</h2>
+    <p>
+      This platform is intended for professional, strategic, and long-term collaboration
+      inquiries aligned with regulated healthcare and institutional standards.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © Taylor A. Miller — Healthcare Distribution & Strategic Investment
+</footer>
 
 </body>
 </html>
