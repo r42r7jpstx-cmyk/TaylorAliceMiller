@@ -149,10 +149,7 @@ section:first-of-type{border-top:none}
   padding-left:32px;
   margin-bottom:40px;
 }
-.timeline-item h4{
-  margin-bottom:8px;
-  font-weight:500;
-}
+.timeline-item h4{margin-bottom:8px;font-weight:500}
 .timeline-item p{color:var(--gray)}
 
 /* Compliance */
@@ -163,7 +160,12 @@ section:first-of-type{border-top:none}
 }
 
 /* Market */
-.market-card img{border-radius:8px}
+.market-card img{
+  border-radius:8px;
+  height:320px;
+  width:100%;
+  object-fit:cover;
+}
 .market-card h4{margin-bottom:12px}
 .market-card p{color:var(--gray)}
 
@@ -190,6 +192,7 @@ footer{
   .grid-2{grid-template-columns:1fr}
   .reverse{direction:ltr}
   section{padding:80px 24px}
+  .market-card img{height:220px}
 }
 </style>
 </head>
@@ -220,41 +223,79 @@ footer{
   </div>
 </header>
 
+<!-- 原有模块：About -->
 <section id="about" class="about">
   <div class="section-inner grid grid-2">
     <img src="portrait-main.jpg" alt="Taylor A. Miller">
     <div>
       <h2 class="section-title">About Taylor</h2>
-      <p>
-        Taylor A. Miller is a healthcare distribution executive operating across multiple U.S. states, 
-        with a professional focus on medical device sales, compliance-driven operations, and long-term market positioning.
-      </p>
-      <p>
-        Educated in Florida with an integrated undergraduate and master’s degree program, 
-        Taylor combines structured academic training with hands-on operational experience in the medical supply chain.
-      </p>
-      <p>
-        Her work philosophy emphasizes credibility, consistency, and accountability—values she considers essential 
-        in healthcare, investment, and any long-term professional relationship.
-      </p>
+      <p>Taylor A. Miller is a healthcare distribution executive operating across multiple U.S. states, with a professional focus on medical device sales, compliance-driven operations, and long-term market positioning.</p>
+      <p>Educated in Florida with an integrated undergraduate and master’s degree program, Taylor combines structured academic training with hands-on operational experience in the medical supply chain.</p>
+      <p>Her work philosophy emphasizes credibility, consistency, and accountability—values she considers essential in healthcare, investment, and any long-term professional relationship.</p>
     </div>
   </div>
 </section>
 
+<!-- 原有模块：Professional Focus -->
+<section id="focus">
+  <div class="section-inner grid grid-2">
+    <div>
+      <h2 class="section-title">Professional Focus</h2>
+      <div class="focus-item">
+        <h4>Medical Device Distribution</h4>
+        <p>Coordinating multi-state distribution strategies while maintaining compliance with U.S. healthcare regulations.</p>
+      </div>
+      <div class="focus-item">
+        <h4>Operational & Regulatory Discipline</h4>
+        <p>Prioritizing sustainable systems, accurate documentation, and risk-aware decision making.</p>
+      </div>
+      <div class="focus-item">
+        <h4>Strategic Partnerships</h4>
+        <p>Building long-term collaborations with clinics, suppliers, and institutional partners.</p>
+      </div>
+    </div>
+    <img src="medical-industry.jpg" alt="Healthcare Industry">
+  </div>
+</section>
+
+<!-- 原有模块：Investment -->
+<section id="investment" class="investment">
+  <div class="section-inner grid grid-2 reverse">
+    <div>
+      <h2 class="section-title">Investment Philosophy</h2>
+      <p>Taylor approaches investment as an extension of strategic thinking rather than speculation.</p>
+      <p>She favors industries with structural demand, regulatory clarity, and long-term relevance—particularly within healthcare and essential services.</p>
+      <p>Capital, in her view, should enhance operational stability and expand perspective, not chase short-term volatility.</p>
+    </div>
+    <img src="investment.jpg" alt="Investment Perspective">
+  </div>
+</section>
+
+<!-- 原有模块：Company -->
+<section id="company">
+  <div class="section-inner grid grid-2">
+    <div class="company-box">
+      <h2 class="section-title">Company Relationship</h2>
+      <p>Taylor is the founder and principal of <strong>All States M.E.D.</strong>, a U.S.-based medical device distribution company operating out of Florida.</p>
+      <p>The company focuses on compliant distribution practices and responsible growth within the U.S. healthcare market.</p>
+      <p><a href="https://www.allstatesmed.com/" target="_blank">Visit Company Website →</a></p>
+    </div>
+    <img src="company.jpg" alt="Company">
+  </div>
+</section>
+
+<!-- 新增模块 1：Timeline -->
 <section id="timeline">
   <div class="section-inner">
     <h2 class="section-title">Career Timeline</h2>
-
     <div class="timeline-item">
       <h4>201X – 201X</h4>
       <p>Education and foundational exposure to healthcare and business operations.</p>
     </div>
-
     <div class="timeline-item">
       <h4>201X – 201X</h4>
       <p>Entry into medical device distribution and early operational responsibilities.</p>
     </div>
-
     <div class="timeline-item">
       <h4>202X – Present</h4>
       <p>Leadership in multi-state healthcare distribution and strategic partnerships.</p>
@@ -262,26 +303,19 @@ footer{
   </div>
 </section>
 
+<!-- 新增模块 2：Compliance -->
 <section id="compliance">
   <div class="section-inner grid grid-2">
     <div class="compliance-box">
       <h2 class="section-title">Compliance & Ethics</h2>
-      <p>
-        Taylor approaches healthcare distribution with a strong emphasis on regulatory awareness, 
-        ethical responsibility, and long-term accountability.
-      </p>
-      <p>
-        She believes that sustainable growth in healthcare requires disciplined processes, 
-        transparent documentation, and respect for jurisdictional standards.
-      </p>
-      <p>
-        Compliance is viewed not as a constraint, but as a foundation for trust and continuity.
-      </p>
+      <p>Taylor approaches healthcare distribution with a strong emphasis on regulatory awareness, ethical responsibility, and long-term accountability.</p>
+      <p>Compliance is viewed not as a constraint, but as a foundation for trust, continuity, and sustainable growth.</p>
     </div>
-    <img src="engagements.jpg" alt="Compliance and Professional Conduct">
+    <img src="engagements.jpg" alt="Compliance">
   </div>
 </section>
 
+<!-- 新增模块 3：Markets -->
 <section id="markets">
   <div class="section-inner">
     <h2 class="section-title">Global Market Presence</h2>
@@ -290,44 +324,33 @@ footer{
       <img src="markets.jpg" alt="Cleveland Clinic">
       <div>
         <h4>Cleveland Clinic — United States</h4>
-        <p>
-          A leading U.S. medical institution recognized for clinical excellence, 
-          advanced research, and high standards in patient care.
-        </p>
+        <p>A leading U.S. medical institution recognized for clinical excellence, advanced research, and high standards in patient care.</p>
       </div>
     </div>
 
     <div class="grid grid-2 market-card reverse" style="margin-top:120px;">
       <div>
         <h4>ID Hospital — South Korea</h4>
-        <p>
-          A globally recognized aesthetic medical institution, 
-          known for innovation, surgical expertise, and international patient programs.
-        </p>
+        <p>A globally recognized aesthetic medical institution, known for innovation, surgical expertise, and international patient programs.</p>
       </div>
-      <img src="markets2.jpg" alt="ID Hospital">
+      <img src="markets3.jpg" alt="ID Hospital">
     </div>
 
     <div class="grid grid-2 market-card" style="margin-top:120px;">
-      <img src="markets3.jpg" alt="The Private Clinic UK">
+      <img src="markets2.jpg" alt="The Private Clinic">
       <div>
         <h4>The Private Clinic — United Kingdom</h4>
-        <p>
-          A well-established private healthcare provider in the UK, 
-          specializing in aesthetic and medical procedures with a patient-centric approach.
-        </p>
+        <p>A well-established private healthcare provider in the UK, specializing in aesthetic and medical procedures with a patient-centric approach.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 原有模块：Contact -->
 <section id="contact" class="contact">
   <div class="section-inner">
     <h2 class="section-title">Professional Inquiries</h2>
-    <p>
-      This platform is intended for professional, strategic, and long-term collaboration inquiries only.
-      Please ensure relevance and clarity when reaching out.
-    </p>
+    <p>This platform is intended for professional, strategic, and long-term collaboration inquiries only. Please ensure relevance and clarity when reaching out.</p>
   </div>
 </section>
 
