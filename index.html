@@ -104,9 +104,7 @@ section{
   padding:120px 24px;
   border-top:1px solid #1e2633;
 }
-section:first-of-type{
-  border-top:none;
-}
+section:first-of-type{border-top:none}
 .section-inner{
   max-width:var(--max-width);
   margin:auto;
@@ -122,38 +120,20 @@ section:first-of-type{
   align-items:center;
 }
 .grid-2{grid-template-columns:1fr 1fr}
-.reverse{
-  direction:rtl;
-}
-.reverse > *{
-  direction:ltr;
-}
+.reverse{direction:rtl}
+.reverse>*{direction:ltr}
 
 /* About */
-.about img{
-  border-radius:8px;
-}
-.about p{
-  color:var(--accent);
-  margin-bottom:20px;
-}
+.about img{border-radius:8px}
+.about p{color:var(--accent);margin-bottom:20px}
 
 /* Focus */
-.focus-item{
-  margin-bottom:28px;
-}
-.focus-item h4{
-  font-weight:500;
-  margin-bottom:8px;
-}
-.focus-item p{
-  color:var(--gray);
-}
+.focus-item{margin-bottom:28px}
+.focus-item h4{font-weight:500;margin-bottom:8px}
+.focus-item p{color:var(--gray)}
 
 /* Investment */
-.investment img{
-  border-radius:8px;
-}
+.investment img{border-radius:8px}
 
 /* Company */
 .company-box{
@@ -161,14 +141,34 @@ section:first-of-type{
   padding:48px;
   border-radius:8px;
 }
-.company-box p{
-  color:var(--accent);
+.company-box p{color:var(--accent)}
+
+/* Timeline */
+.timeline-item{
+  border-left:2px solid #2a3345;
+  padding-left:32px;
+  margin-bottom:40px;
+}
+.timeline-item h4{
+  margin-bottom:8px;
+  font-weight:500;
+}
+.timeline-item p{color:var(--gray)}
+
+/* Compliance */
+.compliance-box{
+  background:var(--dark-soft);
+  padding:48px;
+  border-radius:8px;
 }
 
+/* Market */
+.market-card img{border-radius:8px}
+.market-card h4{margin-bottom:12px}
+.market-card p{color:var(--gray)}
+
 /* Contact */
-.contact{
-  text-align:center;
-}
+.contact{text-align:center}
 .contact p{
   color:var(--accent);
   max-width:640px;
@@ -239,117 +239,85 @@ footer{
       </p>
     </div>
   </div>
+</section>
 
-  <div class="section-inner grid grid-2 reverse" style="margin-top:120px;">
-    <div>
-      <p>
-        Her approach to leadership is defined by independence of thought, long-term orientation, 
-        and a strong preference for clarity over short-term persuasion.
-      </p>
-      <p>
-        She believes professional trust is built through consistent execution rather than visibility, 
-        and that credibility compounds over time.
-      </p>
-    </div>
-    <img src="portrait-secondary.jpg" alt="Taylor A. Miller Secondary Portrait">
-  </div>
+<section id="timeline">
+  <div class="section-inner">
+    <h2 class="section-title">Career Timeline</h2>
 
-  <div class="section-inner grid grid-2" style="margin-top:120px;">
-    <img src="portrait-secondary.jpg" alt="Professional Background">
-    <div>
-      <p>
-        Throughout her career, Taylor has worked closely with suppliers, clinics, and operational partners 
-        across different regulatory environments, developing a practical understanding of how healthcare 
-        distribution functions beyond theory.
-      </p>
-      <p>
-        This exposure has shaped a disciplined working style focused on process clarity, accountability, 
-        and long-term operational resilience.
-      </p>
+    <div class="timeline-item">
+      <h4>201X – 201X</h4>
+      <p>Education and foundational exposure to healthcare and business operations.</p>
     </div>
-  </div>
 
-  <div class="section-inner grid grid-2 reverse" style="margin-top:120px;">
-    <div>
-      <p>
-        In professional collaboration, Taylor values independence, transparency, and consistency of execution.
-      </p>
-      <p>
-        She prefers partnerships built on aligned incentives and mutual respect, 
-        rather than short-term opportunistic arrangements.
-      </p>
+    <div class="timeline-item">
+      <h4>201X – 201X</h4>
+      <p>Entry into medical device distribution and early operational responsibilities.</p>
     </div>
-    <img src="portrait-main.jpg" alt="Values and Principles">
+
+    <div class="timeline-item">
+      <h4>202X – Present</h4>
+      <p>Leadership in multi-state healthcare distribution and strategic partnerships.</p>
+    </div>
   </div>
 </section>
 
-<section id="focus">
+<section id="compliance">
   <div class="section-inner grid grid-2">
-    <div>
-      <h2 class="section-title">Professional Focus</h2>
-
-      <div class="focus-item">
-        <h4>Medical Device Distribution</h4>
-        <p>
-          Coordinating multi-state distribution strategies while maintaining compliance with U.S. healthcare regulations.
-        </p>
-      </div>
-
-      <div class="focus-item">
-        <h4>Operational & Regulatory Discipline</h4>
-        <p>
-          Prioritizing sustainable systems, accurate documentation, and risk-aware decision making.
-        </p>
-      </div>
-
-      <div class="focus-item">
-        <h4>Strategic Partnerships</h4>
-        <p>
-          Building long-term collaborations with clinics, suppliers, and institutional partners.
-        </p>
-      </div>
+    <div class="compliance-box">
+      <h2 class="section-title">Compliance & Ethics</h2>
+      <p>
+        Taylor approaches healthcare distribution with a strong emphasis on regulatory awareness, 
+        ethical responsibility, and long-term accountability.
+      </p>
+      <p>
+        She believes that sustainable growth in healthcare requires disciplined processes, 
+        transparent documentation, and respect for jurisdictional standards.
+      </p>
+      <p>
+        Compliance is viewed not as a constraint, but as a foundation for trust and continuity.
+      </p>
     </div>
-
-    <img src="medical-industry.jpg" alt="Healthcare Industry">
+    <img src="engagements.jpg" alt="Compliance and Professional Conduct">
   </div>
 </section>
 
-<section id="investment" class="investment">
-  <div class="section-inner grid grid-2 reverse">
-    <div>
-      <h2 class="section-title">Investment Philosophy</h2>
-      <p>
-        Taylor approaches investment as an extension of strategic thinking rather than speculation.
-      </p>
-      <p>
-        She favors industries with structural demand, regulatory clarity, and long-term relevance— 
-        particularly within healthcare and essential services.
-      </p>
-      <p>
-        Capital, in her view, should enhance operational stability and expand perspective, 
-        not chase short-term volatility.
-      </p>
-    </div>
-    <img src="investment.jpg" alt="Investment Perspective">
-  </div>
-</section>
+<section id="markets">
+  <div class="section-inner">
+    <h2 class="section-title">Global Market Presence</h2>
 
-<section id="company">
-  <div class="section-inner grid grid-2">
-    <div class="company-box">
-      <h2 class="section-title">Company Relationship</h2>
-      <p>
-        Taylor is the founder and principal of <strong>All States M.E.D.</strong>, 
-        a U.S.-based medical device distribution company operating out of Florida.
-      </p>
-      <p>
-        The company focuses on compliant distribution practices and responsible growth within the U.S. healthcare market.
-      </p>
-      <p>
-        <a href="https://www.allstatesmed.com/" target="_blank">Visit Company Website →</a>
-      </p>
+    <div class="grid grid-2 market-card">
+      <img src="markets.jpg" alt="Cleveland Clinic">
+      <div>
+        <h4>Cleveland Clinic — United States</h4>
+        <p>
+          A leading U.S. medical institution recognized for clinical excellence, 
+          advanced research, and high standards in patient care.
+        </p>
+      </div>
     </div>
-    <img src="company.jpg" alt="Company">
+
+    <div class="grid grid-2 market-card reverse" style="margin-top:120px;">
+      <div>
+        <h4>ID Hospital — South Korea</h4>
+        <p>
+          A globally recognized aesthetic medical institution, 
+          known for innovation, surgical expertise, and international patient programs.
+        </p>
+      </div>
+      <img src="markets2.jpg" alt="ID Hospital">
+    </div>
+
+    <div class="grid grid-2 market-card" style="margin-top:120px;">
+      <img src="markets3.jpg" alt="The Private Clinic UK">
+      <div>
+        <h4>The Private Clinic — United Kingdom</h4>
+        <p>
+          A well-established private healthcare provider in the UK, 
+          specializing in aesthetic and medical procedures with a patient-centric approach.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
