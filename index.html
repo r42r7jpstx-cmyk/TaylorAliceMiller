@@ -61,6 +61,43 @@ nav{
 }
 .nav-links a:hover{color:var(--light)}
 
+/* Hamburger */
+.hamburger{
+  display:none;
+  width:28px;
+  height:20px;
+  flex-direction:column;
+  justify-content:space-between;
+  cursor:pointer;
+}
+.hamburger span{
+  height:2px;
+  background:var(--light);
+  width:100%;
+  display:block;
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav{
+  position:fixed;
+  inset:0;
+  background:rgba(11,15,20,0.95);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.mobile-nav.active{display:flex}
+.mobile-nav ul{
+  list-style:none;
+  text-align:center;
+}
+.mobile-nav li{margin:20px 0}
+.mobile-nav a{
+  font-size:26px;
+  font-family:'Playfair Display',serif;
+}
+
 /* Hero */
 .hero{
   position:relative;
@@ -126,21 +163,6 @@ section:first-of-type{border-top:none}
   font-size:18px;
 }
 
-/* Principles */
-.principles{
-  background:var(--dark-soft);
-  border-radius:var(--radius);
-  padding:60px;
-}
-.principles ul{
-  list-style:none;
-}
-.principles li{
-  margin-bottom:16px;
-  color:var(--accent);
-  font-size:18px;
-}
-
 /* Focus */
 .focus-item{margin-bottom:28px}
 .focus-item h4{font-weight:500;margin-bottom:8px}
@@ -203,6 +225,8 @@ footer{
 
 /* Responsive */
 @media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
   .hero h1{font-size:38px}
   .hero p{font-size:16px}
   .grid-2{grid-template-columns:1fr}
@@ -227,72 +251,48 @@ footer{
       <a href="#markets">Markets</a>
       <a href="#contact">Contact</a>
     </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#focus">Professional Focus</a></li>
+    <li><a href="#investment">Investment</a></li>
+    <li><a href="#company">Company</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#markets">Markets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
 <header class="hero">
   <video src="hero.mp4" autoplay muted loop playsinline></video>
   <div class="hero-content">
-    <h1>
-      Healthcare Distribution Executive<br>
-      Founder of All States M.E.D.
-    </h1>
-    <p>
-      Focused on medical devices, regulatory compliance, and long-term strategic investment.<br>
-      Long-term thinking in regulated healthcare markets.
-    </p>
+    <h1>Healthcare Distribution Executive<br>Founder of All States M.E.D.</h1>
+    <p>Focused on medical devices, regulatory compliance, and long-term strategic investment.</p>
   </div>
 </header>
 
 <section id="about" class="about">
   <div class="section-inner grid grid-2">
-    <img src="portrait-main.jpg" alt="Taylor A. Miller">
+    <img src="portrait-main.jpg">
     <div>
       <h2 class="section-title">About Taylor</h2>
-      <p>
-        Taylor A. Miller entered the medical device industry with a clear focus on building
-        sustainable systems rather than short-term transactions.
-      </p>
-      <p>
-        She approaches healthcare distribution through the lens of long-term responsibility,
-        believing that compliance, credibility, and consistency are the foundations of durable growth.
-      </p>
+      <p>Taylor A. Miller entered the medical device industry with a clear focus on building sustainable systems rather than short-term transactions.</p>
+      <p>She approaches healthcare distribution through the lens of long-term responsibility, believing that compliance, credibility, and consistency are the foundations of durable growth.</p>
     </div>
   </div>
 
   <div class="section-inner grid grid-2" style="margin-top:120px;">
     <div>
-      <p>
-        Independence has been central to Taylor’s professional path. She values decision-making autonomy,
-        disciplined execution, and partnerships grounded in trust rather than convenience.
-      </p>
-      <p>
-        Her working style reflects stability, loyalty, and a long-term mindset—qualities she considers
-        essential when operating in regulated healthcare environments.
-      </p>
+      <p>Independence has been central to Taylor’s professional path. She values decision-making autonomy, disciplined execution, and partnerships grounded in trust rather than convenience.</p>
+      <p>Her working style reflects stability, loyalty, and a long-term mindset—qualities essential in regulated healthcare environments.</p>
     </div>
-    <img src="portrait-secondary.jpg" alt="Taylor A. Miller">
-  </div>
-
-  <div class="section-inner" style="margin-top:120px;">
-    <p>
-      In decision-making, Taylor prioritizes regulatory clarity, operational sustainability,
-      and institutional credibility over short-term efficiency. She avoids transactional
-      arrangements that compromise long-term trust, and favors environments where accountability,
-      transparency, and discipline define professional standards.
-    </p>
-  </div>
-</section>
-
-<section class="principles">
-  <div class="section-inner">
-    <h2 class="section-title">Operating Principles</h2>
-    <ul>
-      <li>Long-term orientation over short-term optimization</li>
-      <li>Regulatory discipline as a foundation for trust</li>
-      <li>Selective, institution-aligned partnerships</li>
-      <li>Measured growth within compliant healthcare frameworks</li>
-    </ul>
+    <img src="portrait-secondary.jpg">
   </div>
 </section>
 
@@ -300,20 +300,11 @@ footer{
   <div class="section-inner grid grid-2">
     <div>
       <h2 class="section-title">Professional Focus</h2>
-      <div class="focus-item">
-        <h4>Medical Device Distribution & Channel Management</h4>
-        <p>Coordinating compliant, multi-state distribution pathways within regulated U.S. healthcare environments.</p>
-      </div>
-      <div class="focus-item">
-        <h4>Regulatory & Risk Awareness</h4>
-        <p>Embedding regulatory considerations into operational, commercial, and strategic decision-making.</p>
-      </div>
-      <div class="focus-item">
-        <h4>Cross-Institution Collaboration</h4>
-        <p>Engaging with clinics, suppliers, and institutional partners across international markets.</p>
-      </div>
+      <div class="focus-item"><h4>Medical Device Distribution</h4><p>Multi-state, compliant distribution pathways.</p></div>
+      <div class="focus-item"><h4>Regulatory Awareness</h4><p>Risk-aligned operational decision-making.</p></div>
+      <div class="focus-item"><h4>Institutional Collaboration</h4><p>Engagement with clinics and suppliers.</p></div>
     </div>
-    <img src="medical-industry.jpg" alt="Healthcare Industry">
+    <img src="medical-industry.jpg">
   </div>
 </section>
 
@@ -321,17 +312,10 @@ footer{
   <div class="section-inner grid grid-2">
     <div>
       <h2 class="section-title">Investment Philosophy</h2>
-      <p>
-        Taylor views investment as a long-term strategic discipline rather than a speculative activity.
-      </p>
-      <p>
-        She favors industries with structural demand, regulatory clarity, and enduring relevance—particularly healthcare.
-      </p>
-      <p>
-        Investment, in her view, should enhance perspective, stability, and resilience over time.
-      </p>
+      <p>Investment is treated as a long-term strategic discipline rather than speculation.</p>
+      <p>Healthcare remains a priority sector due to structural demand and regulatory clarity.</p>
     </div>
-    <img src="investment.jpg" alt="Investment Perspective">
+    <img src="investment.jpg">
   </div>
 </section>
 
@@ -339,38 +323,19 @@ footer{
   <div class="section-inner grid grid-2">
     <div class="company-box">
       <h2 class="section-title">Company Relationship</h2>
-      <p>
-        Taylor is the founder and principal of <strong>All States M.E.D.</strong>,
-        a U.S.-based medical device distribution company.
-      </p>
-      <p>
-        The company operates with a strong emphasis on regulatory compliance
-        and long-term partnerships within the U.S. healthcare market.
-      </p>
-      <p>
-        <a href="https://www.allstatesmed.com/" target="_blank">Visit Company Website →</a>
-      </p>
+      <p>Founder and principal of <strong>All States M.E.D.</strong></p>
+      <p><a href="https://www.allstatesmed.com/" target="_blank">Visit Company Website →</a></p>
     </div>
-    <img src="company.jpg" alt="Company">
+    <img src="company.jpg">
   </div>
 </section>
 
 <section id="timeline">
-  <!-- Timeline 保持原样，一字未动 -->
   <div class="section-inner">
     <h2 class="section-title">Career Timeline</h2>
-    <div class="timeline-item">
-      <h4>201X – 201X</h4>
-      <p>Academic foundation and early exposure to healthcare and business environments.</p>
-    </div>
-    <div class="timeline-item">
-      <h4>201X – 201X</h4>
-      <p>Entry into medical device distribution and operational roles.</p>
-    </div>
-    <div class="timeline-item">
-      <h4>202X – Present</h4>
-      <p>Leadership in multi-state distribution and strategic partnerships.</p>
-    </div>
+    <div class="timeline-item"><h4>201X – 201X</h4><p>Academic and professional foundations.</p></div>
+    <div class="timeline-item"><h4>201X – 201X</h4><p>Entry into healthcare distribution.</p></div>
+    <div class="timeline-item"><h4>202X – Present</h4><p>Leadership in multi-state operations.</p></div>
   </div>
 </section>
 
@@ -378,16 +343,9 @@ footer{
   <div class="section-inner grid grid-2">
     <div class="compliance-box">
       <h2 class="section-title">Compliance & Ethics</h2>
-      <p>
-        Compliance is central to Taylor’s professional philosophy.
-        She views regulatory discipline as a foundation for trust and continuity.
-      </p>
-      <p>
-        Ethical conduct, transparency, and accountability guide both operational decisions
-        and long-term strategic planning.
-      </p>
+      <p>Regulatory discipline as a foundation for trust.</p>
     </div>
-    <img src="engagements.jpg" alt="Compliance">
+    <img src="engagements.jpg">
   </div>
 </section>
 
@@ -396,39 +354,18 @@ footer{
     <h2 class="section-title">Global Market Presence</h2>
 
     <div class="grid grid-2 market-card">
-      <img src="markets.jpg" alt="Cleveland Clinic">
-      <div>
-        <h4>Cleveland Clinic — United States</h4>
-        <p>
-          Engagement with U.S.-based institutional healthcare environments through
-          professional exposure, reference collaboration, and market observation
-          within highly regulated clinical systems.
-        </p>
-      </div>
+      <img src="markets.jpg">
+      <div><h4>Cleveland Clinic — United States</h4><p>Professional exposure within regulated clinical systems.</p></div>
     </div>
 
     <div class="grid grid-2 market-card" style="margin-top:120px;">
-      <div>
-        <h4>ID Hospital — South Korea</h4>
-        <p>
-          Interaction with leading Asian aesthetic medical institutions through
-          professional exchanges, industry engagement, and exposure to international
-          clinical standards and operational models.
-        </p>
-      </div>
-      <img src="markets3.jpg" alt="ID Hospital">
+      <div><h4>ID Hospital — South Korea</h4><p>Industry engagement and reference collaboration.</p></div>
+      <img src="markets3.jpg">
     </div>
 
     <div class="grid grid-2 market-card" style="margin-top:120px;">
-      <img src="markets2.jpg" alt="The Private Clinic">
-      <div>
-        <h4>The Private Clinic — United Kingdom</h4>
-        <p>
-          Engagement with private healthcare providers in the U.K. market through
-          professional observation, sector research, and reference-based collaboration
-          within regulated aesthetic medicine environments.
-        </p>
-      </div>
+      <img src="markets2.jpg">
+      <div><h4>The Private Clinic — United Kingdom</h4><p>Observation and sector interaction.</p></div>
     </div>
   </div>
 </section>
@@ -436,15 +373,18 @@ footer{
 <section id="contact" class="contact">
   <div class="section-inner">
     <h2 class="section-title">Professional & Strategic Inquiries</h2>
-    <p>
-      This platform is intended for professional, long-term, and compliance-aligned collaboration inquiries only.
-    </p>
+    <p>For long-term, compliant collaboration only.</p>
   </div>
 </section>
 
-<footer>
-  © Taylor A. Miller — Healthcare Distribution & Strategic Investment
-</footer>
+<footer>© Taylor A. Miller — Healthcare Distribution & Strategic Investment</footer>
+
+<script>
+const hamburger=document.getElementById('hamburger');
+const mobileNav=document.getElementById('mobileNav');
+hamburger.onclick=()=>mobileNav.classList.add('active');
+mobileNav.onclick=()=>mobileNav.classList.remove('active');
+</script>
 
 </body>
 </html>
