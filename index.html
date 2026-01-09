@@ -1,126 +1,317 @@
-1️⃣ Hero / Positioning（身份定位）
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Taylor A. Miller | Healthcare Distribution & Investment</title>
 
-目标：一句话让人知道她是谁
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-示例方向（不是最终文案）：
+<style>
+:root{
+  --dark:#0b0f14;
+  --dark-soft:#121821;
+  --light:#ffffff;
+  --gray:#9aa4b2;
+  --accent:#c7ccd4;
+  --max-width:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--dark);
+  color:var(--light);
+  line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 
-Healthcare Distribution Executive
-Founder of All States M.E.D.
-Focused on Medical Devices, Compliance & Strategic Investment
+/* Navigation */
+nav{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  z-index:100;
+  background:rgba(11,15,20,0.65);
+  backdrop-filter:blur(10px);
+}
+.nav-inner{
+  max-width:var(--max-width);
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.nav-logo{
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+.nav-links a{
+  margin-left:28px;
+  font-size:14px;
+  color:var(--gray);
+}
+.nav-links a:hover{color:var(--light)}
 
-背景建议：
+/* Hero */
+.hero{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+.hero video{
+  position:absolute;
+  top:50%;left:50%;
+  min-width:100%;
+  min-height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,rgba(11,15,20,0.55),rgba(11,15,20,0.85));
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:var(--max-width);
+  margin:auto;
+  padding:0 24px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:56px;
+  max-width:720px;
+}
+.hero p{
+  margin-top:24px;
+  max-width:620px;
+  color:var(--accent);
+  font-size:18px;
+}
 
-高端、克制
+/* Sections */
+section{
+  padding:120px 24px;
+}
+.section-inner{
+  max-width:var(--max-width);
+  margin:auto;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:40px;
+}
+.grid{
+  display:grid;
+  gap:80px;
+}
+.grid-2{grid-template-columns:1fr 1fr}
 
-深色或中性色
+/* About */
+.about img{
+  border-radius:6px;
+}
+.about p{
+  color:var(--accent);
+  margin-bottom:20px;
+}
 
-不要商业感太重
+/* Focus */
+.focus-item{
+  margin-bottom:28px;
+}
+.focus-item h4{
+  font-weight:500;
+  margin-bottom:8px;
+}
+.focus-item p{
+  color:var(--gray);
+}
 
-2️⃣ About Taylor（个人背景，不是履历表）
+/* Investment */
+.investment img{
+  border-radius:6px;
+}
 
-重点不是“我毕业于哪里”，而是：
+/* Company */
+.company-box{
+  background:var(--dark-soft);
+  padding:48px;
+  border-radius:8px;
+}
+.company-box p{
+  color:var(--accent);
+}
 
-为什么进入医疗器械行业
+/* Contact */
+.contact{
+  text-align:center;
+}
+.contact p{
+  color:var(--accent);
+  max-width:640px;
+  margin:20px auto 0;
+}
 
-如何看待 合规、长期合作、信用
+/* Footer */
+footer{
+  padding:60px 24px;
+  border-top:1px solid #1e2633;
+  text-align:center;
+  color:var(--gray);
+  font-size:14px;
+}
 
-为什么坚持独立经营
+/* Responsive */
+@media(max-width:900px){
+  .hero h1{font-size:40px}
+  .grid-2{grid-template-columns:1fr}
+  section{padding:80px 24px}
+}
+</style>
+</head>
 
-这里要体现她的性格关键词：
+<body>
 
-稳重
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Taylor A. Miller</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#focus">Professional Focus</a>
+      <a href="#investment">Investment</a>
+      <a href="#company">Company</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-忠诚
+<header class="hero">
+  <video src="hero.mp4" autoplay muted loop playsinline></video>
+  <div class="hero-content">
+    <h1>Healthcare Distribution & Strategic Investment</h1>
+    <p>
+      Founder and principal of a U.S.-based medical device distribution company, 
+      focused on long-term partnerships, regulatory integrity, and sustainable growth.
+    </p>
+  </div>
+</header>
 
-坚持
+<section id="about" class="about">
+  <div class="section-inner grid grid-2">
+    <img src="portrait-main.jpg" alt="Taylor A. Miller">
+    <div>
+      <h2 class="section-title">About Taylor</h2>
+      <p>
+        Taylor A. Miller is a healthcare distribution executive operating across multiple U.S. states, 
+        with a professional focus on medical device sales, compliance-driven operations, and long-term market positioning.
+      </p>
+      <p>
+        Educated in Florida with an integrated undergraduate and master’s degree program, 
+        Taylor combines structured academic training with hands-on operational experience in the medical supply chain.
+      </p>
+      <p>
+        Her work philosophy emphasizes credibility, consistency, and accountability—values she considers essential 
+        in healthcare, investment, and any long-term professional relationship.
+      </p>
+    </div>
+  </div>
+</section>
 
-守信用
+<section id="focus">
+  <div class="section-inner grid grid-2">
+    <div>
+      <h2 class="section-title">Professional Focus</h2>
 
-独立
+      <div class="focus-item">
+        <h4>Medical Device Distribution</h4>
+        <p>
+          Coordinating multi-state distribution strategies while maintaining compliance with U.S. healthcare regulations.
+        </p>
+      </div>
 
-👉 这是 筛选合作对象 的模块，不是讨好所有人。
+      <div class="focus-item">
+        <h4>Operational & Regulatory Discipline</h4>
+        <p>
+          Prioritizing sustainable systems, accurate documentation, and risk-aware decision making.
+        </p>
+      </div>
 
-3️⃣ Professional Focus（专业方向）
+      <div class="focus-item">
+        <h4>Strategic Partnerships</h4>
+        <p>
+          Building long-term collaborations with clinics, suppliers, and institutional partners.
+        </p>
+      </div>
+    </div>
 
-而不是“产品列表”，而是：
+    <img src="medical-industry.jpg" alt="Healthcare Industry">
+  </div>
+</section>
 
-医疗器械分销与渠道管理
+<section id="investment" class="investment">
+  <div class="section-inner grid grid-2">
+    <img src="investment.jpg" alt="Investment Perspective">
+    <div>
+      <h2 class="section-title">Investment Philosophy</h2>
+      <p>
+        Taylor approaches investment as an extension of strategic thinking rather than speculation.
+      </p>
+      <p>
+        She favors industries with structural demand, regulatory clarity, and long-term relevance— 
+        particularly within healthcare and essential services.
+      </p>
+      <p>
+        Capital, in her view, should enhance operational stability and expand perspective, 
+        not chase short-term volatility.
+      </p>
+    </div>
+  </div>
+</section>
 
-多州医疗供应链协调
+<section id="company">
+  <div class="section-inner grid grid-2">
+    <div class="company-box">
+      <h2 class="section-title">Company Relationship</h2>
+      <p>
+        Taylor is the founder and principal of <strong>All States M.E.D.</strong>, 
+        a U.S.-based medical device distribution company operating out of Florida.
+      </p>
+      <p>
+        The company focuses on compliant distribution practices and responsible growth within the U.S. healthcare market.
+      </p>
+      <p>
+        <a href="https://www.allstatesmed.com/" target="_blank">Visit Company Website →</a>
+      </p>
+    </div>
+    <img src="company.jpg" alt="Company">
+  </div>
+</section>
 
-合规与风险控制
+<section id="contact" class="contact">
+  <div class="section-inner">
+    <h2 class="section-title">Professional Inquiries</h2>
+    <p>
+      This platform is intended for professional, strategic, and long-term collaboration inquiries only.
+      Please ensure relevance and clarity when reaching out.
+    </p>
+  </div>
+</section>
 
-跨州、跨体系合作经验
+<footer>
+  © Taylor A. Miller — Healthcare Distribution & Investment
+</footer>
 
-这一部分对医生、医院、合作商极其重要。
-
-4️⃣ Investment Philosophy（非常加分）
-
-她喜欢投资，这在高净值圈子是巨大优势。
-
-可以做一个克制、理性的板块：
-
-如何看待长期投资
-
-为什么医疗行业值得长期投入
-
-投资 ≠ 投机
-
-⚠️ 注意：
-不涉及具体金额、不涉及收益率、不做金融承诺
-👉 这是“价值观展示”，不是理财产品
-
-5️⃣ Company Relationship（公司作为背书）
-
-这里只需要：
-
-一段介绍 All States M.E.D.
-
-公司官网链接
-
-地址（增强真实性）
-
-说明她的角色（Founder / Principal）
-
-公司在这里是“佐证”，不是主角
-
-6️⃣ Contact / Professional Inquiry
-
-非常重要的一点：
-
-不写“Contact us”
-
-不写“Get a quote”
-
-而是：
-
-Professional & Strategic Inquiries Only
-
-给人一种：
-
-不是所有人都能随便联系我的感觉
-
-六、视觉与风格建议（非常关键）
-🎨 风格关键词
-
-冷静
-
-克制
-
-干净
-
-高信用感
-
-不性感、不浮夸、不网红
-
-❌ 强烈不建议
-
-过多个人生活照
-
-过度女性化设计
-
-金色、奢华风
-
-Instagram 模板感
-
-👉 她是 医疗 + 投资 + 决策者，不是 influencer。
+</body>
+</html>
