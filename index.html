@@ -118,8 +118,6 @@ section:first-of-type{border-top:none}
 }
 .grid{display:grid;gap:80px;align-items:center}
 .grid-2{grid-template-columns:1fr 1fr}
-.reverse{direction:rtl}
-.reverse>*{direction:ltr}
 
 /* About */
 .about p{
@@ -193,7 +191,6 @@ footer{
   .hero h1{font-size:38px}
   .hero p{font-size:16px}
   .grid-2{grid-template-columns:1fr}
-  .reverse{direction:ltr}
   section{padding:80px 24px}
   .market-card img{height:220px}
   .section-title{font-size:30px}
@@ -232,6 +229,7 @@ footer{
 </header>
 
 <section id="about" class="about">
+  <!-- 第一段：图片左 / 文字右 -->
   <div class="section-inner grid grid-2">
     <img src="portrait-main.jpg" alt="Taylor A. Miller">
     <div>
@@ -247,7 +245,8 @@ footer{
     </div>
   </div>
 
-  <div class="section-inner grid grid-2 reverse" style="margin-top:120px;">
+  <!-- 第二段：文字左 / 图片右（真正交叉） -->
+  <div class="section-inner grid grid-2" style="margin-top:120px;">
     <div>
       <p>
         Independence has been central to Taylor’s professional path. She values decision-making autonomy,
@@ -284,7 +283,7 @@ footer{
 </section>
 
 <section id="investment" class="investment">
-  <div class="section-inner grid grid-2 reverse">
+  <div class="section-inner grid grid-2">
     <div>
       <h2 class="section-title">Investment Philosophy</h2>
       <p>
@@ -368,7 +367,7 @@ footer{
       </div>
     </div>
 
-    <div class="grid grid-2 market-card reverse" style="margin-top:120px;">
+    <div class="grid grid-2 market-card" style="margin-top:120px;">
       <div>
         <h4>ID Hospital — South Korea</h4>
         <p>A globally recognized aesthetic medical institution with international reach.</p>
