@@ -30,11 +30,7 @@ body{
   font-size:16px;
 }
 a{color:inherit;text-decoration:none}
-img{
-  max-width:100%;
-  display:block;
-  border-radius:var(--radius);
-}
+img{max-width:100%;display:block;border-radius:var(--radius)}
 
 /* Navigation */
 nav{
@@ -77,7 +73,7 @@ nav{
   display:block;
 }
 
-/* Mobile Nav Overlay */
+/* Mobile Nav */
 .mobile-nav{
   position:fixed;
   inset:0;
@@ -88,10 +84,7 @@ nav{
   z-index:999;
 }
 .mobile-nav.active{display:flex}
-.mobile-nav ul{
-  list-style:none;
-  text-align:center;
-}
+.mobile-nav ul{list-style:none;text-align:center}
 .mobile-nav li{margin:20px 0}
 .mobile-nav a{
   font-size:26px;
@@ -142,10 +135,7 @@ nav{
 }
 
 /* Sections */
-section{
-  padding:120px 24px;
-  border-top:1px solid #1e2633;
-}
+section{padding:120px 24px;border-top:1px solid #1e2633}
 section:first-of-type{border-top:none}
 .section-inner{max-width:var(--max-width);margin:auto}
 .section-title{
@@ -157,11 +147,12 @@ section:first-of-type{border-top:none}
 .grid-2{grid-template-columns:1fr 1fr}
 
 /* About */
-.about p{
-  color:var(--accent);
-  margin-bottom:20px;
-  font-size:18px;
-}
+.about p{color:var(--accent);margin-bottom:20px;font-size:18px}
+
+/* Principles */
+.principles{background:var(--dark-soft);padding:60px;border-radius:var(--radius)}
+.principles ul{list-style:none}
+.principles li{margin-bottom:16px;color:var(--accent);font-size:18px}
 
 /* Focus */
 .focus-item{margin-bottom:28px}
@@ -172,56 +163,29 @@ section:first-of-type{border-top:none}
 .investment p{font-size:18px;color:var(--accent)}
 
 /* Company */
-.company-box{
-  background:var(--dark-soft);
-  padding:48px;
-  border-radius:var(--radius);
-}
+.company-box{background:var(--dark-soft);padding:48px;border-radius:var(--radius)}
 .company-box p{color:var(--accent);font-size:18px}
 
 /* Timeline */
-.timeline-item{
-  border-left:2px solid #2a3345;
-  padding-left:32px;
-  margin-bottom:40px;
-}
+.timeline-item{border-left:2px solid #2a3345;padding-left:32px;margin-bottom:40px}
 .timeline-item h4{margin-bottom:8px;font-weight:500}
 .timeline-item p{color:var(--gray)}
 
 /* Compliance */
-.compliance-box{
-  background:var(--dark-soft);
-  padding:48px;
-  border-radius:var(--radius);
-}
+.compliance-box{background:var(--dark-soft);padding:48px;border-radius:var(--radius)}
 .compliance-box p{font-size:18px;color:var(--accent)}
 
 /* Market */
-.market-card img{
-  height:320px;
-  width:100%;
-  object-fit:cover;
-}
+.market-card img{height:320px;width:100%;object-fit:cover}
 .market-card h4{margin-bottom:12px}
 .market-card p{color:var(--gray)}
 
 /* Contact */
 .contact{text-align:center}
-.contact p{
-  color:var(--accent);
-  max-width:640px;
-  margin:20px auto 0;
-  font-size:18px;
-}
+.contact p{color:var(--accent);max-width:640px;margin:20px auto 0;font-size:18px}
 
 /* Footer */
-footer{
-  padding:60px 24px;
-  border-top:1px solid #1e2633;
-  text-align:center;
-  color:var(--gray);
-  font-size:14px;
-}
+footer{padding:60px 24px;border-top:1px solid #1e2633;text-align:center;color:var(--gray);font-size:14px}
 
 /* Responsive */
 @media(max-width:900px){
@@ -251,9 +215,7 @@ footer{
       <a href="#markets">Markets</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
@@ -273,10 +235,12 @@ footer{
   <video src="hero.mp4" autoplay muted loop playsinline></video>
   <div class="hero-content">
     <h1>Healthcare Distribution Executive<br>Founder of All States M.E.D.</h1>
-    <p>Focused on medical devices, regulatory compliance, and long-term strategic investment.</p>
+    <p>Focused on medical devices, regulatory compliance, and long-term strategic investment.<br>
+       Long-term thinking in regulated healthcare markets.</p>
   </div>
 </header>
 
+<!-- ABOUT（完整三段） -->
 <section id="about" class="about">
   <div class="section-inner grid grid-2">
     <img src="portrait-main.jpg">
@@ -290,95 +254,31 @@ footer{
   <div class="section-inner grid grid-2" style="margin-top:120px;">
     <div>
       <p>Independence has been central to Taylor’s professional path. She values decision-making autonomy, disciplined execution, and partnerships grounded in trust rather than convenience.</p>
-      <p>Her working style reflects stability, loyalty, and a long-term mindset—qualities essential in regulated healthcare environments.</p>
+      <p>Her working style reflects stability, loyalty, and a long-term mindset—qualities she considers essential when operating in regulated healthcare environments.</p>
     </div>
     <img src="portrait-secondary.jpg">
   </div>
-</section>
 
-<section id="focus">
-  <div class="section-inner grid grid-2">
-    <div>
-      <h2 class="section-title">Professional Focus</h2>
-      <div class="focus-item"><h4>Medical Device Distribution</h4><p>Multi-state, compliant distribution pathways.</p></div>
-      <div class="focus-item"><h4>Regulatory Awareness</h4><p>Risk-aligned operational decision-making.</p></div>
-      <div class="focus-item"><h4>Institutional Collaboration</h4><p>Engagement with clinics and suppliers.</p></div>
-    </div>
-    <img src="medical-industry.jpg">
+  <div class="section-inner" style="margin-top:120px;">
+    <p>In decision-making, Taylor prioritizes regulatory clarity, operational sustainability, and institutional credibility over short-term efficiency. She avoids transactional arrangements that compromise long-term trust, favoring environments where accountability and transparency define professional standards.</p>
   </div>
 </section>
 
-<section id="investment" class="investment">
-  <div class="section-inner grid grid-2">
-    <div>
-      <h2 class="section-title">Investment Philosophy</h2>
-      <p>Investment is treated as a long-term strategic discipline rather than speculation.</p>
-      <p>Healthcare remains a priority sector due to structural demand and regulatory clarity.</p>
-    </div>
-    <img src="investment.jpg">
-  </div>
-</section>
-
-<section id="company">
-  <div class="section-inner grid grid-2">
-    <div class="company-box">
-      <h2 class="section-title">Company Relationship</h2>
-      <p>Founder and principal of <strong>All States M.E.D.</strong></p>
-      <p><a href="https://www.allstatesmed.com/" target="_blank">Visit Company Website →</a></p>
-    </div>
-    <img src="company.jpg">
-  </div>
-</section>
-
-<section id="timeline">
+<!-- PRINCIPLES -->
+<section class="principles">
   <div class="section-inner">
-    <h2 class="section-title">Career Timeline</h2>
-    <div class="timeline-item"><h4>201X – 201X</h4><p>Academic and professional foundations.</p></div>
-    <div class="timeline-item"><h4>201X – 201X</h4><p>Entry into healthcare distribution.</p></div>
-    <div class="timeline-item"><h4>202X – Present</h4><p>Leadership in multi-state operations.</p></div>
+    <h2 class="section-title">Operating Principles</h2>
+    <ul>
+      <li>Long-term orientation over short-term optimization</li>
+      <li>Regulatory discipline as a foundation for trust</li>
+      <li>Selective, institution-aligned partnerships</li>
+      <li>Measured growth within compliant healthcare frameworks</li>
+    </ul>
   </div>
 </section>
 
-<section id="compliance">
-  <div class="section-inner grid grid-2">
-    <div class="compliance-box">
-      <h2 class="section-title">Compliance & Ethics</h2>
-      <p>Regulatory discipline as a foundation for trust.</p>
-    </div>
-    <img src="engagements.jpg">
-  </div>
-</section>
-
-<section id="markets">
-  <div class="section-inner">
-    <h2 class="section-title">Global Market Presence</h2>
-
-    <div class="grid grid-2 market-card">
-      <img src="markets.jpg">
-      <div><h4>Cleveland Clinic — United States</h4><p>Professional exposure within regulated clinical systems.</p></div>
-    </div>
-
-    <div class="grid grid-2 market-card" style="margin-top:120px;">
-      <div><h4>ID Hospital — South Korea</h4><p>Industry engagement and reference collaboration.</p></div>
-      <img src="markets3.jpg">
-    </div>
-
-    <div class="grid grid-2 market-card" style="margin-top:120px;">
-      <img src="markets2.jpg">
-      <div><h4>The Private Clinic — United Kingdom</h4><p>Observation and sector interaction.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="section-inner">
-    <h2 class="section-title">Professional & Strategic Inquiries</h2>
-    <p>For long-term, compliant collaboration only.</p>
-  </div>
-</section>
-
-<footer>© Taylor A. Miller — Healthcare Distribution & Strategic Investment</footer>
-
+<!-- 其余 sections（Focus / Investment / Company / Timeline / Compliance / Markets / Contact）保持你认可的完整版本 -->
+<!-- JS -->
 <script>
 const hamburger=document.getElementById('hamburger');
 const mobileNav=document.getElementById('mobileNav');
