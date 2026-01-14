@@ -217,6 +217,13 @@ section:first-of-type{border-top:none}
 .market-card h4{margin-bottom:12px}
 .market-card p{color:var(--gray)}
 
+.market-card{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+
+
 /* Contact */
 .contact{text-align:center}
 .contact p{
@@ -399,7 +406,6 @@ footer{
   <div class="section-inner">
     <h2 class="section-title">Global Market Presence</h2>
 
-    <div class="grid grid-2 market-card">
       <img src="markets.jpg" alt="Cleveland Clinic">
       <div>
         <h4>Cleveland Clinic — United States</h4>
@@ -472,6 +478,7 @@ targets.forEach(el=>observer.observe(el));
 
 </body>
 </html>
+
 
 
 
